@@ -14,27 +14,27 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice.toLowerCase() === "paper" && computerChoice === "rock") {
-        console.log("You win! Paper beats Rock");
+        alert("You win! Paper beats Rock");
         humanScore++;
     } else if (humanChoice.toLowerCase() === "paper" && computerChoice === "scissors") {
-        console.log("You lose! Scissors beats Paper");
+        alert("You lose! Scissors beats Paper");
         computerScore++;
     } else if (humanChoice.toLowerCase() === "rock" && computerChoice === "paper") {
-        console.log("You lose! Paper beats Rock");
+        alert("You lose! Paper beats Rock");
         computerScore++;
     } else if (humanChoice.toLowerCase() === "rock" && computerChoice === "scissors") {
-        console.log("You win! Rock beats Scissors");
+        alert("You win! Rock beats Scissors");
         humanScore++;
     } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "paper") {
-        console.log("You win! Scissors beats Paper");
+        alert("You win! Scissors beats Paper");
         humanScore++;
     } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "rock") {
-        console.log("You lose! Rock beats Scissors");
+        alert("You lose! Rock beats Scissors");
         computerScore++;
     } else if (humanChoice.toLowerCase() === computerChoice) {
-        console.log("It's a tie!");
+        alert("It's a tie!");
     } else {
-        console.log("Invalid choice by human or computer.");
+        alert("Invalid choice by human or computer.");
     }
 }
 
@@ -44,7 +44,7 @@ function playGame() {
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
-    console.log(`Final Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    alert(`Final Scores - Human: ${humanScore}, Computer: ${computerScore}`);
 }
 
 playGame();
